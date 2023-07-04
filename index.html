@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundara Karma</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+
+
+    <section>
+        <div id="loading-screen2">
+          <div class="loader"></div>
+          <img src="img/SL LOGO LOWREZ2.png" alt="" class="logo-image-load">
+        </div>
+      </section>
+
+      <script>
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen2'); // Update ID to match the HTML
+  const contentSection = document.getElementById('content');
+
+  // Show the loading screen
+  loadingScreen.style.opacity = '1';
+
+  // Hide the loading screen and show the content section after a delay
+  setTimeout(function() {
+    loadingScreen.style.opacity = '0';
+
+    // Set the loading screen's z-index to -9 after the transition
+    setTimeout(function() {
+      loadingScreen.style.zIndex = '-9';
+      contentSection.style.zIndex = 'auto'; // Reset z-index for content section
+    }, 250);
+  }, 1000);
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        contentSection.style.animation = 'slideInFromBottom 2s ease-out forwards';
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  observer.observe(contentSection);
+});
+
+
+      </script>
+
+
+
+
+
+
+<section class="main_section">
+
+
+<img src="img/post.png" alt="" class="topimg">
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="tour-section-img">
+   <h1>TICKETS</h1>
+    <div class="tour-container">
+      <div id="seated-55fdf2c0" data-artist-id="93990b4d-0a95-40ee-892f-bf69631b3bdf" data-css-version="3"></div>
+    </div>
+  </section>
+
+  <script src="https://widget.seated.com/app.js"></script>
+
+
+
+
+
+
+
+
+
+<section class="bottom-section">
+
+
+    <a href="https://bfan.link/friends-of-mine" class="listen">
+        <h1>Friends of Mine</h1>
+                <h2>OUT NOW</h2>
+            </a>
+
+
+
+
+<div class="sign_tour">
+    <a href="" class="signa">Sign Up</a>
+</div>
+
+
+
+<!-- Pop-up modal -->
+<div id="signup-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Sign Up To Our Mailing List</h2>
+      <form id="signup-form">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+  // Get the sign-up anchor tag and the modal element
+  const signUpLink = document.querySelector('.signa');
+  const modal = document.getElementById('signup-modal');
+
+  // Get the close button element
+  const closeBtn = document.querySelector('.close');
+
+  // Open the modal when the sign-up link is clicked
+  signUpLink.addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent the default link behavior
+    modal.style.display = 'block'; // Show the modal
+  });
+
+  // Close the modal when the close button is clicked
+  closeBtn.addEventListener('click', function() {
+    modal.style.display = 'none'; // Hide the modal
+  });
+
+  // Close the modal when clicking outside of it
+  window.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none'; // Hide the modal
+    }
+  });
+
+  // Handle the form submission
+  const signupForm = document.getElementById('signup-form');
+  signupForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form submission
+    // Add your code here to handle the form data
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="social">
+   <a href="https://www.instagram.com/sundarakarma/?hl=en"> <img src="img/ig.png" alt=""></a>
+    <a href="https://twitter.com/sundarakarma"><img src="img/twit.png" alt=""></a>
+   <a href="https://www.youtube.com/channel/UCrtA6GG5r3jT2F9k4N6FxaQ"> <img src="img/yt.png" alt=""></a>
+  <a href="https://www.facebook.com/SundaraKarma/?locale=en_GB">  <img src="img/fb.png" alt="" class="fb"></a>
+    </div>
+        <div class="contact">
+        <a href="https://isrightrecords.store/pages/contact" class="contact">is right records</a>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script>
+        // Wait for the page to load
+        window.addEventListener('load', function() {
+            // Get the logo element
+            const mainLogo = document.querySelector('.main_logo');
+
+            // Delay the animation to give a smooth transition
+            setTimeout(() => {
+                mainLogo.style.opacity = '1'; // Show the logo by changing the opacity
+            }, 500); // Adjust the delay time as needed
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+</body>
+</html>
